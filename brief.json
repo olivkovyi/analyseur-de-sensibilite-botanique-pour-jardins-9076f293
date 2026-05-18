@@ -1,0 +1,290 @@
+{
+  "run_id": "run-1779072897369",
+  "job_index": 1,
+  "params": {
+    "owner_user_id": "user-1774822953462",
+    "owner_username": "admin",
+    "owner_display_name": "Administrator",
+    "count": 1,
+    "archetype": "tool",
+    "market": "France",
+    "language": "fr",
+    "country": "FR",
+    "brief": "Créez le jardin de vos rêves. Obtenez des recommandations de plantes basées sur les conditions spécifiques de…",
+    "notes": "Déterminez les plantes idéales pour votre espace extérieur en analysant l'ensoleillement, le type de sol et les microclimats de votre jardin urbain.\nS'adresse aux jardiniers urbains, débutants ou expérimentés, cherchant à optimiser leurs plantations. Le thème 'Mechanical Botanical' met en avant la synergie entre nature et technologie.\nDéterminez les plantes idéales pour votre espace extérieur en analysant l'ensoleillement, le type de sol et les microclimats de votre jardin urbain.\nDéterminez les plantes idéales pour votre espace extérieur en analysant l'ensoleillement, le type de sol et les microclimats de votre jardin urbain. S'adresse aux jardiniers urbains, débutants ou expérimentés, cherchant à optimiser leurs plantations. Le thème 'Mechanical Botanical' met en avant la synergie entre natur…",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "external_site_request_id": "",
+    "external_client_ref": "",
+    "external_source_label": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "forum-de-jeu.shop",
+    "network_hosting_pool": "4vps:netoper | server_id=447345 | ip=5.253.59.18 | ssh_user=root | ssh_port=22",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "allow_url_fallback": false,
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": true,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "tool",
+    "archetype_mix": [
+      "tool"
+    ],
+    "forced_design_theme": "mechanical-botanical",
+    "forced_structure_preset": "split-command",
+    "site_idea_title": "Analyseur de Sensibilité Botanique pour Jardins Urbains",
+    "site_idea_summary": "Déterminez les plantes idéales pour votre espace extérieur en analysant l'ensoleillement, le type de sol et les microclimats de votre jardin urbain.",
+    "forced_slug": "analyseur-de-sensibilite-botanique-pour-jardins-9076f293"
+  },
+  "site_spec": {
+    "slug": "analyseur-de-sensibilite-botanique-pour-jardins-9076f293",
+    "theme": {
+      "name": "Mechanical Botanical",
+      "slug": "mechanical-botanical",
+      "eyebrow": "Organic Systems",
+      "family": "mechanical-botanical",
+      "moods": [
+        "organic",
+        "futuristic",
+        "balanced",
+        "fresh"
+      ],
+      "archetypes": [
+        "tool",
+        "generator",
+        "calculator"
+      ],
+      "niches": [
+        "eco tools",
+        "wellness tools",
+        "sustainability",
+        "travel tools",
+        "consumer utility"
+      ],
+      "keywords": [
+        "organic",
+        "tech",
+        "botanical",
+        "iridescent",
+        "fresh"
+      ],
+      "token_index": [
+        "balanced",
+        "botanical",
+        "calculator",
+        "consumer",
+        "eco",
+        "fresh",
+        "futuristic",
+        "generator",
+        "iridescent",
+        "mechanical",
+        "organic",
+        "sustainability",
+        "systems",
+        "tech",
+        "tool",
+        "tools",
+        "travel",
+        "utility",
+        "wellness"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap",
+      "display_font": "\"Sora\", sans-serif",
+      "body_font": "\"Manrope\", sans-serif",
+      "layout": "split",
+      "card_style": "glass",
+      "button_style": "gradient",
+      "decor_style": "orbs",
+      "hero_template": "1.08fr 0.92fr",
+      "seo_template": "1.18fr 0.82fr",
+      "feature_columns": 3,
+      "faq_columns": 3,
+      "hero_min_height": "78vh",
+      "panel_radius": "28px",
+      "card_radius": "26px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "22px",
+      "palette": {
+        "bg": "linear-gradient(145deg, #081c15 0%, #1b4332 42%, #c7f9cc 100%)",
+        "surface": "rgba(8, 28, 21, 0.74)",
+        "surface_border": "rgba(128,237,153,0.18)",
+        "text": "#f1fff4",
+        "muted": "#b7e4c7",
+        "accent": "#80ed99",
+        "accent_alt": "#72ddf7",
+        "hero_glow": "rgba(128, 237, 153, 0.18)",
+        "button_text": "#062012",
+        "panel_alt": "rgba(255,255,255,0.04)",
+        "shadow": "0 30px 88px rgba(4, 12, 8, 0.34)",
+        "input_fill": "rgba(255,255,255,0.05)"
+      }
+    },
+    "structure": {
+      "name": "Split Command",
+      "slug": "split-command",
+      "hero_variant": "split",
+      "proof_variant": "metrics",
+      "section_order": [
+        "features",
+        "proof",
+        "faq",
+        "seo"
+      ],
+      "feature_columns": 3,
+      "faq_columns": 3,
+      "family": "hero-first",
+      "moods": [
+        "clean",
+        "balanced",
+        "conversion"
+      ],
+      "archetypes": [
+        "tool",
+        "calculator",
+        "generator"
+      ],
+      "niches": [
+        "general utility",
+        "comparison",
+        "services"
+      ],
+      "keywords": [
+        "hero",
+        "conversion",
+        "balanced",
+        "operator"
+      ],
+      "token_index": [
+        "balanced",
+        "calculator",
+        "clean",
+        "command",
+        "comparison",
+        "conversion",
+        "faq",
+        "features",
+        "first",
+        "general",
+        "generator",
+        "hero",
+        "metrics",
+        "operator",
+        "proof",
+        "seo",
+        "services",
+        "split",
+        "tool",
+        "utility"
+      ]
+    },
+    "render_direction": "campaign-slab",
+    "render_direction_name": "Campaign Slab",
+    "page_blueprint": "magazine-fold",
+    "page_blueprint_name": "Magazine Fold",
+    "title": "Analyseur de Sensibilité Botanique pour Jardins Urbains",
+    "tagline": "Paramétrez Votre Écosystème Urbain",
+    "description": "Déterminez les plantes idéales pour votre espace extérieur en analysant l",
+    "feature_prefix": "Bloc",
+    "action": "Utiliser l'outil",
+    "cta_primary": "Analyser Mon Jardin",
+    "cta_secondary": "Consulter la FAQ",
+    "inputs": [
+      {
+        "id": "primary",
+        "label": "Texte ou besoin",
+        "type": "text",
+        "placeholder": "Votre besoin principal",
+        "weight": 1.0
+      },
+      {
+        "id": "context",
+        "label": "Contexte",
+        "type": "text",
+        "placeholder": "Situation ou objectif",
+        "weight": 1.0
+      },
+      {
+        "id": "scope",
+        "label": "Intensité",
+        "type": "number",
+        "placeholder": "3",
+        "weight": 0.3
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Campaign Slab",
+        "label": "Cadence"
+      },
+      {
+        "value": "3",
+        "label": "Entrées"
+      },
+      {
+        "value": "Résultat recommandé",
+        "label": "Sortie"
+      }
+    ],
+    "trust_labels": [
+      "Campaign Slab",
+      "Analyser Mon Jardin",
+      "Résultat recommandé",
+      "Utilitaire immédiat",
+      "Structure SEO claire"
+    ],
+    "result_label": "Résultat recommandé",
+    "result_unit": "",
+    "runtime_mode": "analysis_tool",
+    "page_variant": "showcase",
+    "faq_topic": "Analyseur de Sensibilité Botanique pour Jardins Urbains",
+    "faq_entries": [
+      {
+        "question": "Pourquoi utiliser cet outil pour Analyseur de Sensibilité Botanique pour Jardins Urbains ?",
+        "answer": "Il aide à cadrer le besoin rapidement et à orienter vers une prochaine action claire sur le marché France."
+      },
+      {
+        "question": "Le résultat est-il immédiat ?",
+        "answer": "Oui. L'interface est pensée pour une réponse rapide, lisible et exploitable dès la première interaction."
+      },
+      {
+        "question": "Cette page est-elle adaptée au SEO ?",
+        "answer": "Oui. La structure mélange utilité, clarté éditoriale et signaux de confiance sans surcharger l'expérience."
+      }
+    ],
+    "seo_paragraphs": [
+      "Cette page capte une intention forte autour de Analyseur de Sensibilité Botanique pour Jardins Urbains et la transforme en action utile pour un public situé sur France.",
+      "Le format hero-first accélère la compréhension, réduit les frictions et améliore la lisibilité sur mobile comme sur desktop.",
+      "Le socle reste volontairement simple pour faciliter les tests, la QA continue et les variations SEO."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Analyseur de Sensibilité Botanique pour Jardins Urbains | Paramétrez Votre Écosystème Urbain</title>\n    <meta name=\"description\" content=\"Déterminez les plantes idéales pour votre espace extérieur en analysant l\">\n    <link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E\">\n    <style>\n        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400&display=swap');\n\n        :root {\n            --color-primary: #3A5A40;\n            --color-secondary: #DAD7CD;\n            --color-accent: #A3B18A;\n            --color-text: #283618;\n            --color-background: #FEFAE0;\n            --font-display: 'Montserrat', sans-serif;\n            --font-body: 'Roboto Mono', monospace;\n        }\n\n        body {\n            font-family: var(--font-body);\n            color: var(--color-text);\n            background-color: var(--color-background);\n            margin: 0;\n            line-height: 1.6;\n            display: flex;\n            flex-direction: column;\n            min-height: 100vh;\n        }\n\n        header {\n            background-color: var(--color-primary);\n            color: var(--color-secondary);\n            padding: 2rem 5%;\n            text-align: center;\n        }\n\n        header h1 {\n            font-family: var(--font-display);\n            font-size: 2.8rem;\n            margin: 0;\n            letter-spacing: 2px;\n            text-transform: uppercase;\n        }\n\n        header p {\n            font-size: 1.1rem;\n            max-width: 800px;\n            margin: 1rem auto 0;\n        }\n\n        main {\n            flex-grow: 1;\n            padding: 2rem 5%;\n            display: flex;\n            flex-wrap: wrap;\n            gap: 2rem;\n            justify-content: center;\n        }\n\n        .panel {\n            background-color: var(--color-secondary);\n            padding: 2.5rem;\n            border-radius: 8px;\n            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);\n            max-width: 600px;\n            width: 100%;\n            box-sizing: border-box;\n            display: flex;\n            flex-direction: column;\n        }\n\n        .panel h2 {\n            font-family: var(--font-display);\n            color: var(--color-primary);\n            font-size: 1.8rem;\n            margin-top: 0;\n            margin-bottom: 1.5rem;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            border-bottom: 2px solid var(--color-accent);\n            padding-bottom: 0.5rem;\n        }\n\n        form#tool-form label {\n            display: block;\n            margin-bottom: 0.6rem;\n            font-weight: bold;\n            color: var(--color-primary);\n            font-size: 0.95rem;\n            text-transform: uppercase;\n        }\n\n        form#tool-form select,\n        form#tool-form textarea {\n            width: 100%;\n            padding: 0.8rem;\n            margin-bottom: 1.5rem;\n            border: 1px solid var(--color-accent);\n            border-radius: 4px;\n            font-family: var(--font-body);\n            font-size: 1rem;\n            background-color: #f7f7ee;\n            color: var(--color-text);\n            box-sizing: border-box;\n        }\n\n        form#tool-form textarea {\n            resize: vertical;\n            min-height: 100px;\n        }\n\n        button#tool-submit {\n            background-color: var(--color-primary);\n            color: var(--color-secondary);\n            padding: 1rem 2rem;\n            border: none;\n            border-radius: 5px;\n            font-family: var(--font-display);\n            font-size: 1.1rem;\n            cursor: pointer;\n            transition: background-color 0.3s ease;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            align-self: flex-start;\n        }\n\n        button#tool-submit:hover {\n            background-color: #588157;\n        }\n\n        #tool-result {\n            margin-top: 1.5rem;\n            padding-top: 1.5rem;\n            border-top: 1px dashed var(--color-accent);\n            font-size: 0.95rem;\n        }\n\n        #tool-result h3 {\n            font-family: var(--font-display);\n            color: var(--color-primary);\n            font-size: 1.4rem;\n            margin-top: 0;\n            margin-bottom: 1rem;\n            text-transform: uppercase;\n        }\n\n        #tool-result div {\n            margin-bottom: 1rem;\n            padding: 1rem;\n            background-color: #E8E8E4;\n            border-left: 3px solid var(--color-accent);\n            border-radius: 4px;\n        }\n\n        #tool-result div strong {\n            color: var(--color-primary);\n            display: block;\n            margin-bottom: 0.5rem;\n            font-family: var(--font-display);\n        }\n\n        .call-to-action {\n            text-align: center;\n            padding: 3rem 5%;\n            background-color: var(--color-accent);\n            color: var(--color-text);\n        }\n\n        .call-to-action h2 {\n            font-family: var(--font-display);\n            font-size: 2.2rem;\n            margin-bottom: 1.5rem;\n            color: var(--color-primary);\n        }\n\n        .call-to-action p {\n            max-width: 700px;\n            margin: 0 auto 2rem;\n            font-size: 1.1rem;\n        }\n\n        .call-to-action button {\n            background-color: var(--color-primary);\n            color: var(--color-secondary);\n            padding: 1.2rem 2.5rem;\n            border: none;\n            border-radius: 5px;\n            font-family: var(--font-display);\n            font-size: 1.2rem;\n            cursor: pointer;\n            transition: background-color 0.3s ease;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            font-weight: bold;\n        }\n\n        .call-to-action button:hover {\n            background-color: #588157;\n        }\n\n        footer {\n            background-color: var(--color-primary);\n            color: var(--color-secondary);\n            padding: 2rem 5%;\n            text-align: center;\n            font-size: 0.9rem;\n        }\n\n        footer h3 {\n            font-family: var(--font-display);\n            font-size: 1.5rem;\n            margin-top: 0;\n            margin-bottom: 1rem;\n            text-transform: uppercase;\n        }\n\n        footer p {\n            max-width: 800px;\n            margin: 0.5rem auto;\n        }\n\n        @media (max-width: 768px) {\n            header h1 {\n                font-size: 2rem;\n            }\n            .panel {\n                padding: 1.5rem;\n            }\n            .panel h2 {\n                font-size: 1.5rem;\n            }\n            .call-to-action h2 {\n                font-size: 1.8rem;\n            }\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://analyseur-de-sensibilite-botanique-pour-jardins-9076f293.onrender.com\">\n    <meta property=\"og:title\" content=\"Analyseur de Sensibilité Botanique pour Jardins Urbains\">\n    <meta property=\"og:description\" content=\"Déterminez les plantes idéales pour votre espace extérieur en analysant l\">\n    <meta property=\"og:url\" content=\"https://analyseur-de-sensibilite-botanique-pour-jardins-9076f293.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Analyseur de Sensibilité Botanique pour Jardins Urbains\", \"description\": \"Déterminez les plantes idéales pour votre espace extérieur en analysant l\", \"url\": \"https://analyseur-de-sensibilite-botanique-pour-jardins-9076f293.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"analyseur-de-sensibilite-botanique-pour-jardins-9076f293\" data-runtime-mode=\"analysis_tool\">\n    <header>\n        <h1>Analyseur de Sensibilité Botanique</h1>\n        <p>Déterminez les plantes idéales pour votre espace extérieur en analysant l'ensoleillement, le type de sol et les microclimats de votre jardin urbain. Optimisez vos plantations avec notre approche \"Mechanical Botanical\".</p>\n    </header>\n\n    <main>\n        <section class=\"panel\">\n            <h2>Paramétrez Votre Écosystème Urbain</h2>\n            <p>Fournissez-nous quelques détails sur votre espace. Notre algorithme \"botanico-mécanique\" vous guidera vers les choix les plus adaptés.</p>\n            <form id=\"tool-form\">\n                <label for=\"ensoleillement\">Niveau d'ensoleillement quotidien :</label>\n                <select id=\"ensoleillement\" name=\"ensoleillement\" required>\n                    <option value=\"\">Sélectionnez une option</option>\n                    <option value=\"plein-soleil\">Plein soleil (6h+ par jour)</option>\n                    <option value=\"mi-ombre\">Mi-ombre (3-6h par jour)</option>\n                    <option value=\"ombre\">Ombre (moins de 3h par jour)</option>\n                </select>\n\n                <label for=\"type-sol\">Type de sol dominant :</label>\n                <select id=\"type-sol\" name=\"type-sol\" required>\n                    <option value=\"\">Sélectionnez une option</option>\n                    <option value=\"argileux\">Argileux (lourd, retient l'eau)</option>\n                    <option value=\"sableux\">Sableux (léger, drainant)</option>\n                    <option value=\"limoneux\">Limoneux (équilibré, fertile)</option>\n                    <option value=\"calcaire\">Calcaire (alcalin)</option>\n                    <option value=\"acide\">Acide (pH bas)</option>\n                </select>\n\n                <label for=\"microclimat\">Observations sur le microclimat de votre jardin (vents, humidité, zones chaudes/froides) :</label>\n                <textarea id=\"microclimat\" name=\"microclimat\" rows=\"4\" placeholder=\"Ex: 'Mur exposé au sud retenant la chaleur', 'Couloir de vent fréquent', 'Zone très humide près d'un point d'eau'...\"></textarea>\n\n                <button type=\"submit\" id=\"tool-submit\">Analyser Mon Jardin</button>\n            </form>\n        </section>\n\n        <section class=\"panel\" id=\"tool-result\">\n            <h2 id=\"result-headline\">Vos Recommandations Botaniques</h2>\n            <p>Vos plantes idéales apparaîtront ici. Préparez-vous à transformer votre espace !</p>\n            <!-- Results will be injected here -->\n        </section>\n    </main>\n\n    <section class=\"call-to-action\">\n        <h2>Passez du Vert au Vibrant.</h2>\n        <p>Débloquez le potentiel caché de votre balcon, terrasse ou rebord de fenêtre. Notre analyse précise vous évite les déceptions et vous mène directement au succès botanique. Créez un havre de paix personnalisé et durable.</p>\n        <button data-affiliate-slot=\"promo-top-button\">Découvrir nos Packs de Graines</button>\n    </section>\n\n    <footer>\n        <h3>Jardiner en Ville, Simplifié.</h3>\n        <p>Chez \"Mechanical Botanical\", nous croyons que chaque espace urbain mérite de s'épanouir. Notre outil est conçu pour les citadins passionnés, offrant une synergie parfaite entre la rigueur technologique et la splendeur naturelle. Plantez malin, récoltez la beauté.</p>\n        <p>&copy; 2023 Mechanical Botanical. Tous droits réservés.</p>\n        <p>\n            <a href=\"#\" style=\"color: var(--color-secondary); text-decoration: none; margin: 0 10px;\">Mentions Légales</a> |\n            <a href=\"#\" style=\"color: var(--color-secondary); text-decoration: none; margin: 0 10px;\">Confidentialité</a>\n        </p>\n\n        <!-- SEO Section for France -->\n        <div style=\"margin-top: 3rem; text-align: left; font-size: 0.8rem; line-height: 1.8; color: #D4D4CE;\">\n            <h3>Optimiser Votre Jardin Urbain : Conseils et Solutions</h3>\n            <p>Vous recherchez des <strong style=\"color: var(--color-secondary);\">idées de plantes pour balcon en ville</strong> ou comment <strong style=\"color: var(--color-secondary);\">aménager un petit jardin sur terrasse</strong> ? Notre analyseur vous aide à choisir les meilleures espèces végétales adaptées à votre <strong style=\"color: var(--color-secondary);\">ensoleillement de jardin urbain</strong> et au <strong style=\"color: var(--color-secondary);\">type de sol de jardinière</strong>. Que vous soyez un <strong style=\"color: var(--color-secondary);\">jardinier débutant en appartement</strong> ou un expert en <strong style=\"color: var(--color-secondary);\">permaculture urbaine</strong>, découvrez des <strong style=\"color: var(--color-secondary);\">plantes résistantes pour microclimat citadin</strong>. Trouvez des <strong style=\"color: var(--color-secondary);\">fleurs pour balcon plein soleil</strong>, des <strong style=\"color: var(--color-secondary);\">aromatiques pour zone ombragée</strong>, ou des <strong style=\"color: var(--color-secondary);\">légumes adaptés au sol argileux de ville</strong>. Notre outil est votre allié pour un <strong style=\"color: var(--color-secondary);\">jardin potager sur balcon productif</strong> et un <strong style=\"color: var(--color-secondary);\">coin de verdure en ville sans entretien</strong> excessif. Évitez les erreurs courantes et apprenez à <strong style=\"color: var(--color-secondary);\">reconnaître le sol de votre jardin urbain</strong> pour un <strong style=\"color: var(--color-secondary);\">choix de plantes optimisé</strong>. Que faire pousser sur un <strong style=\"color: var(--color-secondary);\">balcon exposé nord</strong> ou un <strong style=\"color: var(--color-secondary);\">jardin sur toit en ville</strong> ? \"Mechanical Botanical\" vous offre des réponses précises pour chaque situation.</p>\n        </div>\n    </footer>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(event) {\n            event.preventDefault();\n\n            const ensoleillement = document.getElementById('ensoleillement').value;\n            const typeSol = document.getElementById('type-sol').value;\n            const microclimat = document.getElementById('microclimat').value.toLowerCase();\n            const resultDiv = document.getElementById('tool-result');\n            let recommendations = [];\n\n            // Logic for plant recommendations\n            if (!ensoleillement || !typeSol) {\n                recommendations.push({\n                    category: \"Attention\",\n                    plants: [\"Veuillez sélectionner toutes les options pour obtenir une recommandation complète.\"],\n                    description: \"Les champs 'Ensoleillement' et 'Type de sol' sont obligatoires.\"\n                });\n            } else {\n                // Base recommendations\n                if (ensoleillement === 'plein-soleil') {\n                    recommendations.push({\n                        category: \"Plein Soleil\",\n                        plants: [\"Lavande\", \"Romarin\", \"Thym\", \"Géranium\", \"Sedum\", \"Tomates (variétés naines)\", \"Capucines\"],\n                        description: \"Ces plantes aiment la lumière directe et tolèrent bien la chaleur.\"\n                    });\n                } else if (ensoleillement === 'mi-ombre') {\n                    recommendations.push({\n                        category: \"Mi-Ombre\",\n                        plants: [\"Menthe\", \"Persil\", \"Fougères\", \"Hostas\", \"Impatiens\", \"Bégonias\", \"Fraisiers\"],\n                        description: \"Idéales pour les zones recevant quelques heures de soleil le matin ou le soir.\"\n                    });\n                } else if (ensoleillement === 'ombre') {\n                    recommendations.push({\n                        category: \"Ombre\",\n                        plants: [\"Lierre\", \"Mousse\", \"Fougères (certaines)\", \"Primevères\", \"Hortensias (certaines variétés)\", \"Pervenches\"],\n                        description: \"Parfaites pour les recoins peu lumineux, sous les arbres ou les balcons exposés nord.\"\n                    });\n                }\n\n                if (typeSol === 'argileux') {\n                    recommendations.push({\n                        category: \"Sol Argileux\",\n                        plants: [\"Rosiers\", \"Groseilliers\", \"Choux\", \"Haricots\", \"Poireaux\"],\n                        description: \"Ce sol retient bien l'eau et les nutriments, mais nécessite un bon drainage.\"\n                    });\n                } else if (typeSol === 'sableux') {\n                    recommendations.push({\n                        category: \"Sol Sableux\",\n                        plants: [\"Carottes\", \"Pommes de terre\", \"Radis\", \"Cactus\", \"Plantes grasses\", \"Graminées ornementales\"],\n                        description: \"Excellent drainage, mais nécessite un apport régulier en compost pour retenir l'eau et les nutriments.\"\n                    });\n                } else if (typeSol === 'limoneux') {\n                    recommendations.push({\n                        category: \"Sol Limoneux\",\n                        plants: [\"Presque toutes les plantes ! Rosiers, légumes feuilles, fleurs annuelles...\"],\n                        description: \"Le sol idéal : fertile, retient l'eau et les nutriments tout en étant bien drainé.\"\n                    });\n                } else if (typeSol === 'calcaire') {\n                    recommendations.push({\n                        category: \"Sol Calcaire\",\n                        plants: [\"Buis\", \"Lilas\", \"Cistes\", \"Lavande\", \"Iris\", \"Chèvrefeuille\"],\n                        description: \"Préférer les plantes qui tolèrent ou apprécient un pH élevé.\"\n                    });\n                } else if (typeSol === 'acide') {\n                    recommendations.push({\n                        category: \"Sol Acide\",\n                        plants: [\"Hortensias (bleus)\", \"Rhododendrons\", \"Azalées\", \"Camélias\", \"Bruyères\", \"Fougères\"],\n                        description: \"Choisissez des plantes acidophiles qui s'épanouissent dans un pH bas.\"\n                    });\n                }\n\n                // Microclimate adjustments\n                if (microclimat.includes('vent')) {\n                    recommendations.push({\n                        category: \"Protection contre le Vent\",\n                        plants: [\"Généralement des plantes basses et robustes : Sedum, Graminées naines, Pensées, Oeillet\"],\n                        description: \"Prévoyez des brise-vents ou des plantes résilientes au vent.\"\n                    });\n                }\n                if (microclimat.includes('chaleur') || microclimat.includes('mur exposé sud')) {\n                    recommendations.push({\n                        category: \"Zones Chaudes\",\n                        plants: [\"Figuiers (nains)\", \"Vigne (grimpante)\", \"Géraniums lierre\", \"Plantes succulentes\"],\n                        description: \"Ces zones peuvent amplifier la chaleur et la sécheresse, choisissez des espèces adaptées.\"\n                    });\n                }\n                if (microclimat.includes('humide') || microclimat.includes('point d\\'eau')) {\n                    recommendations.push({\n                        category: \"Zones Humides\",\n                        plants: [\"Menthe\", \"Prêle\", \"Certaines fougères\", \"Sauge des marais\"],\n                        description: \"Idéal pour les plantes qui apprécient une humidité constante ou un sol humide.\"\n                    });\n                }\n            }\n\n\n            resultDiv.innerHTML = `<h3>Vos Recommandations Botaniques</h3>`;\n            if (recommendations.length === 0) {\n                resultDiv.innerHTML += `<p>Aucune recommandation spécifique pour cette combinaison. Essayez d'ajuster vos paramètres ou contactez notre support pour une analyse personnalisée.</p>`;\n            } else {\n                recommendations.forEach(rec => {\n                    resultDiv.innerHTML += `\n                        <div>\n                            <strong>${rec.category} :</strong>\n                            <p>${rec.plants.join(', ')}.</p>\n                            <p style=\"font-size: 0.85rem; color: #588157;\">${rec.description}</p>\n                        </div>\n                    `;\n                });\n            }\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"La zone de resultat est introuvable.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Le formulaire natif a mis a jour la zone de resultat.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"La zone de resultat n'a pas renvoye de contenu exploitable.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Le formulaire principal est introuvable.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
