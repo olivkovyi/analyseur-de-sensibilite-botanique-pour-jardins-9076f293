@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyseur de Sensibilité Botanique pour Jardins Urbains | Paramétrez Votre Écosystème Urbain</title>
+    <meta name="description" content="Déterminez les plantes idéales pour votre espace extérieur en analysant l">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌱%3C/text%3E%3C/svg%3E">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400&display=swap');
+
+        :root {
+            --color-primary: #3A5A40;
+            --color-secondary: #DAD7CD;
+            --color-accent: #A3B18A;
+            --color-text: #283618;
+            --color-background: #FEFAE0;
+            --font-display: 'Montserrat', sans-serif;
+            --font-body: 'Roboto Mono', monospace;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-background);
+            margin: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 1rem auto 0;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 2rem 5%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .panel {
+            background-color: var(--color-secondary);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel h2 {
+            font-family: var(--font-display);
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 0.5rem;
+        }
+
+        form#tool-form label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: bold;
+            color: var(--color-primary);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        form#tool-form select,
+        form#tool-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--color-accent);
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background-color: #f7f7ee;
+            color: var(--color-text);
+            box-sizing: border-box;
+        }
+
+        form#tool-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button#tool-submit {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            align-self: flex-start;
+        }
+
+        button#tool-submit:hover {
+            background-color: #588157;
+        }
+
+        #tool-result {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed var(--color-accent);
+            font-size: 0.95rem;
+        }
+
+        #tool-result h3 {
+            font-family: var(--font-display);
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        #tool-result div {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #E8E8E4;
+            border-left: 3px solid var(--color-accent);
+            border-radius: 4px;
+        }
+
+        #tool-result div strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-display);
+        }
+
+        .call-to-action {
+            text-align: center;
+            padding: 3rem 5%;
+            background-color: var(--color-accent);
+            color: var(--color-text);
+        }
+
+        .call-to-action h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .call-to-action p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        .call-to-action button {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .call-to-action button:hover {
+            background-color: #588157;
+        }
+
+        footer {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: 2rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        footer p {
+            max-width: 800px;
+            margin: 0.5rem auto;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .panel {
+                padding: 1.5rem;
+            }
+            .panel h2 {
+                font-size: 1.5rem;
+            }
+            .call-to-action h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://analyseur-de-sensibilite-botanique-pour-jardins-9076f293.onrender.com">
+    <meta property="og:title" content="Analyseur de Sensibilité Botanique pour Jardins Urbains">
+    <meta property="og:description" content="Déterminez les plantes idéales pour votre espace extérieur en analysant l">
+    <meta property="og:url" content="https://analyseur-de-sensibilite-botanique-pour-jardins-9076f293.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Analyseur de Sensibilité Botanique pour Jardins Urbains", "description": "Déterminez les plantes idéales pour votre espace extérieur en analysant l", "url": "https://analyseur-de-sensibilite-botanique-pour-jardins-9076f293.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="analyseur-de-sensibilite-botanique-pour-jardins-9076f293" data-runtime-mode="analysis_tool">
+    <header>
+        <h1>Analyseur de Sensibilité Botanique</h1>
+        <p>Déterminez les plantes idéales pour votre espace extérieur en analysant l'ensoleillement, le type de sol et les microclimats de votre jardin urbain. Optimisez vos plantations avec notre approche "Mechanical Botanical".</p>
+    </header>
+
+    <main>
+        <section class="panel">
+            <h2>Paramétrez Votre Écosystème Urbain</h2>
+            <p>Fournissez-nous quelques détails sur votre espace. Notre algorithme "botanico-mécanique" vous guidera vers les choix les plus adaptés.</p>
+            <form id="tool-form">
+                <label for="ensoleillement">Niveau d'ensoleillement quotidien :</label>
+                <select id="ensoleillement" name="ensoleillement" required>
+                    <option value="">Sélectionnez une option</option>
+                    <option value="plein-soleil">Plein soleil (6h+ par jour)</option>
+                    <option value="mi-ombre">Mi-ombre (3-6h par jour)</option>
+                    <option value="ombre">Ombre (moins de 3h par jour)</option>
+                </select>
+
+                <label for="type-sol">Type de sol dominant :</label>
+                <select id="type-sol" name="type-sol" required>
+                    <option value="">Sélectionnez une option</option>
+                    <option value="argileux">Argileux (lourd, retient l'eau)</option>
+                    <option value="sableux">Sableux (léger, drainant)</option>
+                    <option value="limoneux">Limoneux (équilibré, fertile)</option>
+                    <option value="calcaire">Calcaire (alcalin)</option>
+                    <option value="acide">Acide (pH bas)</option>
+                </select>
+
+                <label for="microclimat">Observations sur le microclimat de votre jardin (vents, humidité, zones chaudes/froides) :</label>
+                <textarea id="microclimat" name="microclimat" rows="4" placeholder="Ex: 'Mur exposé au sud retenant la chaleur', 'Couloir de vent fréquent', 'Zone très humide près d'un point d'eau'..."></textarea>
+
+                <button type="submit" id="tool-submit">Analyser Mon Jardin</button>
+            </form>
+        </section>
+
+        <section class="panel" id="tool-result">
+            <h2 id="result-headline">Vos Recommandations Botaniques</h2>
+            <p>Vos plantes idéales apparaîtront ici. Préparez-vous à transformer votre espace !</p>
+            <!-- Results will be injected here -->
+        </section>
+    </main>
+
+    <section class="call-to-action">
+        <h2>Passez du Vert au Vibrant.</h2>
+        <p>Débloquez le potentiel caché de votre balcon, terrasse ou rebord de fenêtre. Notre analyse précise vous évite les déceptions et vous mène directement au succès botanique. Créez un havre de paix personnalisé et durable.</p>
+        <button data-affiliate-slot="promo-top-button">Découvrir nos Packs de Graines</button>
+    </section>
+
+    <footer>
+        <h3>Jardiner en Ville, Simplifié.</h3>
+        <p>Chez "Mechanical Botanical", nous croyons que chaque espace urbain mérite de s'épanouir. Notre outil est conçu pour les citadins passionnés, offrant une synergie parfaite entre la rigueur technologique et la splendeur naturelle. Plantez malin, récoltez la beauté.</p>
+        <p>&copy; 2023 Mechanical Botanical. Tous droits réservés.</p>
+        <p>
+            <a href="#" style="color: var(--color-secondary); text-decoration: none; margin: 0 10px;">Mentions Légales</a> |
+            <a href="#" style="color: var(--color-secondary); text-decoration: none; margin: 0 10px;">Confidentialité</a>
+        </p>
+
+        <!-- SEO Section for France -->
+        <div style="margin-top: 3rem; text-align: left; font-size: 0.8rem; line-height: 1.8; color: #D4D4CE;">
+            <h3>Optimiser Votre Jardin Urbain : Conseils et Solutions</h3>
+            <p>Vous recherchez des <strong style="color: var(--color-secondary);">idées de plantes pour balcon en ville</strong> ou comment <strong style="color: var(--color-secondary);">aménager un petit jardin sur terrasse</strong> ? Notre analyseur vous aide à choisir les meilleures espèces végétales adaptées à votre <strong style="color: var(--color-secondary);">ensoleillement de jardin urbain</strong> et au <strong style="color: var(--color-secondary);">type de sol de jardinière</strong>. Que vous soyez un <strong style="color: var(--color-secondary);">jardinier débutant en appartement</strong> ou un expert en <strong style="color: var(--color-secondary);">permaculture urbaine</strong>, découvrez des <strong style="color: var(--color-secondary);">plantes résistantes pour microclimat citadin</strong>. Trouvez des <strong style="color: var(--color-secondary);">fleurs pour balcon plein soleil</strong>, des <strong style="color: var(--color-secondary);">aromatiques pour zone ombragée</strong>, ou des <strong style="color: var(--color-secondary);">légumes adaptés au sol argileux de ville</strong>. Notre outil est votre allié pour un <strong style="color: var(--color-secondary);">jardin potager sur balcon productif</strong> et un <strong style="color: var(--color-secondary);">coin de verdure en ville sans entretien</strong> excessif. Évitez les erreurs courantes et apprenez à <strong style="color: var(--color-secondary);">reconnaître le sol de votre jardin urbain</strong> pour un <strong style="color: var(--color-secondary);">choix de plantes optimisé</strong>. Que faire pousser sur un <strong style="color: var(--color-secondary);">balcon exposé nord</strong> ou un <strong style="color: var(--color-secondary);">jardin sur toit en ville</strong> ? "Mechanical Botanical" vous offre des réponses précises pour chaque situation.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const ensoleillement = document.getElementById('ensoleillement').value;
+            const typeSol = document.getElementById('type-sol').value;
+            const microclimat = document.getElementById('microclimat').value.toLowerCase();
+            const resultDiv = document.getElementById('tool-result');
+            let recommendations = [];
+
+            // Logic for plant recommendations
+            if (!ensoleillement || !typeSol) {
+                recommendations.push({
+                    category: "Attention",
+                    plants: ["Veuillez sélectionner toutes les options pour obtenir une recommandation complète."],
+                    description: "Les champs 'Ensoleillement' et 'Type de sol' sont obligatoires."
+                });
+            } else {
+                // Base recommendations
+                if (ensoleillement === 'plein-soleil') {
+                    recommendations.push({
+                        category: "Plein Soleil",
+                        plants: ["Lavande", "Romarin", "Thym", "Géranium", "Sedum", "Tomates (variétés naines)", "Capucines"],
+                        description: "Ces plantes aiment la lumière directe et tolèrent bien la chaleur."
+                    });
+                } else if (ensoleillement === 'mi-ombre') {
+                    recommendations.push({
+                        category: "Mi-Ombre",
+                        plants: ["Menthe", "Persil", "Fougères", "Hostas", "Impatiens", "Bégonias", "Fraisiers"],
+                        description: "Idéales pour les zones recevant quelques heures de soleil le matin ou le soir."
+                    });
+                } else if (ensoleillement === 'ombre') {
+                    recommendations.push({
+                        category: "Ombre",
+                        plants: ["Lierre", "Mousse", "Fougères (certaines)", "Primevères", "Hortensias (certaines variétés)", "Pervenches"],
+                        description: "Parfaites pour les recoins peu lumineux, sous les arbres ou les balcons exposés nord."
+                    });
+                }
+
+                if (typeSol === 'argileux') {
+                    recommendations.push({
+                        category: "Sol Argileux",
+                        plants: ["Rosiers", "Groseilliers", "Choux", "Haricots", "Poireaux"],
+                        description: "Ce sol retient bien l'eau et les nutriments, mais nécessite un bon drainage."
+                    });
+                } else if (typeSol === 'sableux') {
+                    recommendations.push({
+                        category: "Sol Sableux",
+                        plants: ["Carottes", "Pommes de terre", "Radis", "Cactus", "Plantes grasses", "Graminées ornementales"],
+                        description: "Excellent drainage, mais nécessite un apport régulier en compost pour retenir l'eau et les nutriments."
+                    });
+                } else if (typeSol === 'limoneux') {
+                    recommendations.push({
+                        category: "Sol Limoneux",
+                        plants: ["Presque toutes les plantes ! Rosiers, légumes feuilles, fleurs annuelles..."],
+                        description: "Le sol idéal : fertile, retient l'eau et les nutriments tout en étant bien drainé."
+                    });
+                } else if (typeSol === 'calcaire') {
+                    recommendations.push({
+                        category: "Sol Calcaire",
+                        plants: ["Buis", "Lilas", "Cistes", "Lavande", "Iris", "Chèvrefeuille"],
+                        description: "Préférer les plantes qui tolèrent ou apprécient un pH élevé."
+                    });
+                } else if (typeSol === 'acide') {
+                    recommendations.push({
+                        category: "Sol Acide",
+                        plants: ["Hortensias (bleus)", "Rhododendrons", "Azalées", "Camélias", "Bruyères", "Fougères"],
+                        description: "Choisissez des plantes acidophiles qui s'épanouissent dans un pH bas."
+                    });
+                }
+
+                // Microclimate adjustments
+                if (microclimat.includes('vent')) {
+                    recommendations.push({
+                        category: "Protection contre le Vent",
+                        plants: ["Généralement des plantes basses et robustes : Sedum, Graminées naines, Pensées, Oeillet"],
+                        description: "Prévoyez des brise-vents ou des plantes résilientes au vent."
+                    });
+                }
+                if (microclimat.includes('chaleur') || microclimat.includes('mur exposé sud')) {
+                    recommendations.push({
+                        category: "Zones Chaudes",
+                        plants: ["Figuiers (nains)", "Vigne (grimpante)", "Géraniums lierre", "Plantes succulentes"],
+                        description: "Ces zones peuvent amplifier la chaleur et la sécheresse, choisissez des espèces adaptées."
+                    });
+                }
+                if (microclimat.includes('humide') || microclimat.includes('point d\'eau')) {
+                    recommendations.push({
+                        category: "Zones Humides",
+                        plants: ["Menthe", "Prêle", "Certaines fougères", "Sauge des marais"],
+                        description: "Idéal pour les plantes qui apprécient une humidité constante ou un sol humide."
+                    });
+                }
+            }
+
+
+            resultDiv.innerHTML = `<h3>Vos Recommandations Botaniques</h3>`;
+            if (recommendations.length === 0) {
+                resultDiv.innerHTML += `<p>Aucune recommandation spécifique pour cette combinaison. Essayez d'ajuster vos paramètres ou contactez notre support pour une analyse personnalisée.</p>`;
+            } else {
+                recommendations.forEach(rec => {
+                    resultDiv.innerHTML += `
+                        <div>
+                            <strong>${rec.category} :</strong>
+                            <p>${rec.plants.join(', ')}.</p>
+                            <p style="font-size: 0.85rem; color: #588157;">${rec.description}</p>
+                        </div>
+                    `;
+                });
+            }
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "La zone de resultat est introuvable.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Le formulaire natif a mis a jour la zone de resultat.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "La zone de resultat n'a pas renvoye de contenu exploitable.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Le formulaire principal est introuvable.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
