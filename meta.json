@@ -1,0 +1,44 @@
+{
+  "name": "Analyseur de Sensibilité Botanique pour Jardins Urbains",
+  "description": "Déterminez les plantes idéales pour votre espace extérieur en analysant l",
+  "theme": "tool",
+  "design_theme": "mechanical-botanical",
+  "structure_preset": "split-command",
+  "render_direction": "campaign-slab",
+  "page_blueprint": "magazine-fold",
+  "language": "fr",
+  "country": "FR",
+  "url": null,
+  "expected_url": "https://analyseur-de-sensibilite-botanique-pour-jardins-9076f293.onrender.com",
+  "created": "2026-05-18T02:55:21.418991+00:00",
+  "owner_user_id": "user-1774822953462",
+  "owner_username": "admin",
+  "owner_display_name": "Administrator",
+  "status": "generated",
+  "run_id": "run-1779072897369",
+  "external_site_request_id": null,
+  "external_client_ref": null,
+  "external_source_label": null,
+  "source_type": "generated",
+  "publish_target": "render",
+  "mode": "production",
+  "github": {
+    "status": "pending"
+  },
+  "deployment": {
+    "status": "pending"
+  },
+  "qa": {
+    "status": "pending"
+  },
+  "features": [
+    "Hero pattern: split",
+    "Proof module: metrics",
+    "Design theme: Mechanical Botanical",
+    "Render direction: Campaign Slab",
+    "Page blueprint: Magazine Fold",
+    "Runtime mode: analysis_tool",
+    "Generation mode: direct_html",
+    "Artifact rendered, awaiting QA and deployment"
+  ]
+}
